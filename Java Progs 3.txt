@@ -1,0 +1,103 @@
+Subtraction and Mult of 2D arrays
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.printf("Subtraction and Multiplication of Matrices\n\n");
+        int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] b = {{3,2,1},{6,5,4},{9,8,7}};
+        int[][] c = new int[3][3];
+        Scanner scn = new Scanner(System.in);
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                c[i][j] = a[i][j] - b[i][j];
+            }
+        }
+
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                System.out.printf(c[i][j] + " ");
+            }
+            System.out.printf("\n");
+        }
+    }
+}
+
+
+_______________________
+Transpose of the array
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.printf("Subtraction and Multiplication of Matrices\n\n");
+        int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] b = new int[3][3];
+        Scanner scn = new Scanner(System.in);
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                b[i][j] = a[j][i];
+            }
+        }
+        System.out.printf("The array is:\n");
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                System.out.printf(a[i][j] + " ");
+            }
+            System.out.printf("\n");
+        }
+        System.out.printf("\nTranspose of the array is:\n");
+        for (int i = 0; i<3; i++){
+            for (int j = 0; j<3; j++){
+                System.out.printf(b[i][j] + " ");
+            }
+            System.out.printf("\n");
+        }
+    }
+}
+
+__________________________________
+Sort
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.printf("Hello\n\n");
+        int[] a = {1, 4, 5, 6};
+        Scanner scn = new Scanner(System.in);
+        int temp;
+        for (int i = 0; i<4; i++){
+            for (int j = 1; j<4-i; j++){
+                if (a[j-1] > a[j]){
+                    temp = a[j-1];
+                    a[j-1] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        System.out.printf("Sorted array is: " );
+        for (int i=0; i<4; i++){
+            System.out.printf(" " + a[i] );
+        }
+    }
+}
+
+
+_________________________________
+To find the number in the array
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.printf("Enter the number to be found");
+        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        Scanner scn = new Scanner(System.in);
+        int num;
+        num = scn.nextInt();
+        for (int i = 0; i<14; i++){
+            if (num == a[i]){
+                System.out.printf("The number is at " + (i+1) + "th position"  );
+            }
+        }
+    }
+}
